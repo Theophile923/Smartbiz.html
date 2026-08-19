@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>SmartPi Heritage — PiVitaFlow</title>
+  <title>LegacyVault — VitaNova</title>
   <script src="https://sdk.minepi.com/pi-sdk.js"></script>
   <style>
     * { margin:0; padding:0; box-sizing:border-box; }
@@ -139,14 +139,14 @@
 <header>
   <a class="logo" href="index.html">
     <div class="logo-icon">π</div>
-    <div class="logo-text">Pi<span>Vita</span>Flow</div>
+    <div class="logo-text">Vita<span>Nova</span></div>
   </a>
   <a class="back-btn" href="index.html">← Back</a>
 </header>
 
 <!-- HERO -->
 <div class="hero">
-  <div class="domain-badge">📜 DOMAIN 2 — SMARTPI HERITAGE</div>
+  <div class="domain-badge">📜 DOMAIN 2 — LEGACYVAULT</div>
   <h1>Succession Contract<br/><span>on Pi Network</span></h1>
   <p>Create an immutable, verifiable succession contract. Your assets protected, your family secured — powered by Pi.</p>
   <div class="price-tag">
@@ -367,7 +367,7 @@
     </div>
 
     <div class="legal-box">
-      <strong>⚖️ Legal Disclaimer:</strong> SmartPi Heritage contracts are digital supplements stored on Pi Network with IPFS backup. They must be validated by a licensed notary for full legal compliance. In Rwanda, succession must comply with <strong>Law N°22/99 of 12/11/1999</strong>. PiVitaFlow is not a law firm.
+      <strong>⚖️ Legal Disclaimer:</strong> LegacyVault contracts are digital supplements stored on Pi Network with IPFS backup. They must be validated by a licensed notary for full legal compliance. In Rwanda, succession must comply with <strong>Law N°22/99 of 12/11/1999</strong>. VitaNova is not a law firm.
     </div>
 
     <div class="field">
@@ -389,7 +389,7 @@
 <div class="success-panel" id="success-panel">
   <div class="success-icon">🎉</div>
   <div class="success-title">Contract Deployed!</div>
-  <div class="success-sub">Your SmartPi Heritage contract has been created and stored securely on Pi Network with IPFS backup.</div>
+  <div class="success-sub">Your LegacyVault contract has been created and stored securely on Pi Network with IPFS backup.</div>
   <div class="txid-box" id="txid-display">TXID: Generating...</div>
   <div class="summary-card">
     <div class="summary-title">📜 Contract Details</div>
@@ -398,7 +398,7 @@
     <div class="summary-row"><span class="key">Network</span><span class="val">Pi Network (Sandbox)</span></div>
     <div class="summary-row"><span class="key">Next Step</span><span class="val">Share with beneficiaries to sign</span></div>
   </div>
-  <button class="btn-primary" onclick="window.location.href='index.html'" style="max-width:320px;margin:0 auto">← Back to PiVitaFlow</button>
+  <button class="btn-primary" onclick="window.location.href='index.html'" style="max-width:320px;margin:0 auto">← Back to VitaNova</button>
 </div>
 
 <div id="toast"></div>
@@ -407,7 +407,7 @@
 // ══════════════════════════════════════════
 // Pi Auth (same pattern as index.html)
 // ══════════════════════════════════════════
-class PiService {
+class AuthService {
   constructor() { this.user = null; this.accessToken = null; }
   onIncompletePaymentFound(p) { console.warn("Incomplete payment:", p.identifier); }
   async login(scopes = ["username"]) {
@@ -419,7 +419,7 @@ class PiService {
     } catch(e) { return { success: false, error: e.message }; }
   }
 }
-const piService = new PiService();
+const piService = new AuthService();
 
 window.addEventListener("load", async () => {
   const r = await piService.login(["username", "payments"]);
@@ -643,7 +643,7 @@ async function initiatePayment() {
 
   const timestamp = Date.now();
   const userId    = piService.user.username;
-  const memo      = `SMARTPI-HERITAGE-creation-${timestamp}-${userId}`;
+  const memo      = `LEGACYVAULT-creation-${timestamp}-${userId}`;
 
   try {
     await Pi.init({ version: "2.0", sandbox: false });
@@ -655,7 +655,7 @@ async function initiatePayment() {
         type:      "smartpi_heritage",
         userId:    userId,
         timestamp: timestamp,
-        domain:    "SmartPiHeritage"
+        domain:    "LegacyVault"
       }
     }, {
       onReadyForServerApproval: function(paymentId) {
