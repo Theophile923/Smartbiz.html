@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>PiBusiness Plan -- PiVitaFlow</title>
+  <title>SmartBiz -- VitaNova</title>
   <script src="https://sdk.minepi.com/pi-sdk.js"></script>
   <style>
     *{margin:0;padding:0;box-sizing:border-box;}
@@ -144,24 +144,28 @@
 </head>
 <body>
 
+<!-- HEADER -->
 <header>
   <a class="logo" href="index.html">
     <div class="logo-icon">pi</div>
-    <div class="logo-text">Pi<span>Vita</span>Flow</div>
+    <div class="logo-text">Vita<span>Nova</span></div>
   </a>
   <div class="header-right">
     <div style="display:flex;gap:6px;">
-      <button class="lang-btn" id="btn-fr" onclick="setLang('fr')" style="background:rgba(0,166,81,0.2);border-color:var(--green);color:var(--green);">FR</button>
-      <button class="lang-btn" id="btn-en" onclick="setLang('en')">EN</button>
+    <div style="display:flex;gap:6px;">
+      <button id="btn-fr" onclick="setLang('fr')" style="padding:7px 14px;border-radius:7px;font-size:12px;font-weight:700;cursor:pointer;border:2px solid var(--green);background:rgba(0,166,81,0.25);color:var(--green);">FR</button>
+      <button id="btn-en" onclick="setLang('en')" style="padding:7px 14px;border-radius:7px;font-size:12px;font-weight:700;cursor:pointer;border:2px solid #444;background:transparent;color:var(--muted);">EN</button>
     </div>
+  </div>
     <a class="back-btn" href="index.html" data-fr="Retour" data-en="Back">Retour</a>
   </div>
 </header>
 
+<!-- HERO -->
 <div class="hero">
-  <div class="domain-badge">DOMAIN 1 -- PIBUSINESS PLAN</div>
-  <h1 data-fr="Plan d'Affaires Bankable<br/><span>sur Pi Network</span>" data-en="Bankable Business Plan<br/><span>on Pi Network</span>">Plan d'Affaires Bankable<br/><span>sur Pi Network</span></h1>
-  <p data-fr="Formulaire complet selon le standard CAPMER. Analyse financière professionnelle, conforme aux exigences des banques et institutions financières." data-en="Complete CAPMER standard form. Professional financial analysis, compliant with bank and financial institution requirements.">Formulaire complet selon le standard CAPMER. Analyse financière professionnelle, conforme aux exigences des banques et institutions financières.</p>
+  <div class="domain-badge">DOMAIN 1 -- SMARTBIZ</div>
+  <h1 data-fr="Plan d'Affaires Bankable<br/><span>sur Pi Network</span>" data-en="Smart Business Plan<br/><span>on Pi Network</span>">Plan d'Affaires Bankable<br/><span>sur Pi Network</span></h1>
+  <p data-fr="Formulaire complet selon le standard CAPMER. Analyse financiere professionnelle, conforme aux exigences des banques et institutions financieres." data-en="Complete CAPMER standard form. Professional financial analysis, compliant with bank and financial institution requirements.">Formulaire complet selon le standard CAPMER. Analyse financiere professionnelle, conforme aux exigences des banques et institutions financieres.</p>
 </div>
 
 <div id="user-status">Connecte en tant que <strong id="pi-username">--</strong></div>
@@ -169,6 +173,7 @@
   Chargement du taux BNR...
 </div>
 
+<!-- PROGRESS -->
 <div class="progress-wrap">
   <div class="progress-bar">
     <div class="prog-step active" id="pt1"><div class="prog-circle">1</div><div class="prog-label" data-fr="Promoteur" data-en="Promoter">Promoteur</div></div>
@@ -177,7 +182,7 @@
     <div class="prog-line" id="pl2"></div>
     <div class="prog-step" id="pt3"><div class="prog-circle">3</div><div class="prog-label" data-fr="CAPMER" data-en="CAPMER">CAPMER</div></div>
     <div class="prog-line" id="pl3"></div>
-    <div class="prog-step" id="pt4"><div class="prog-circle">4</div><div class="prog-label" data-fr="Rentabilité" data-en="Profitability">Rentabilité</div></div>
+    <div class="prog-step" id="pt4"><div class="prog-circle">4</div><div class="prog-label" data-fr="Rentabilite" data-en="Profitability">Rentabilite</div></div>
     <div class="prog-line" id="pl4"></div>
     <div class="prog-step" id="pt5"><div class="prog-circle">5</div><div class="prog-label" data-fr="Conclusion" data-en="Conclusion">Conclusion</div></div>
     <div class="prog-line" id="pl5"></div>
@@ -187,14 +192,18 @@
 
 <div class="form-wrap">
 
+<!-- ═══════════════════════════════════════ -->
+<!-- PANEL 1 — PROMOTEUR -->
+<!-- ═══════════════════════════════════════ -->
 <div class="panel active" id="panel-1">
+
   <div class="sec-header">
     <div class="sec-num" data-fr="SECTION 1" data-en="SECTION 1">SECTION 1</div>
     <div class="sec-title" data-fr="Informations sur le <span>Promoteur</span>" data-en="Information about the <span>Promoter</span>">Informations sur le <span>Promoteur</span></div>
   </div>
 
   <div class="subsec">
-    <div class="subsec-title" data-fr="Renseignements Généraux" data-en="General Information">Renseignements Généraux</div>
+    <div class="subsec-title" data-fr="Renseignements Generaux" data-en="General Information">Renseignements Generaux</div>
     <div class="row2">
       <div class="field"><label data-fr="Nom complet *" data-en="Full Name *">Nom complet *</label><input type="text" id="pr-nom" placeholder="Ex: HAKIZIMANA Theophile"/></div>
       <div class="field"><label data-fr="Date de naissance" data-en="Date of Birth">Date de naissance</label><input type="date" id="pr-dob"/></div>
@@ -203,18 +212,18 @@
       <div class="field"><label data-fr="Sexe" data-en="Gender">Sexe</label>
         <select id="pr-sexe">
           <option value="M" data-fr="Masculin" data-en="Male">Masculin</option>
-          <option value="F" data-fr="Féminin" data-en="Female">Féminin</option>
+          <option value="F" data-fr="Feminin" data-en="Female">Feminin</option>
         </select>
       </div>
-      <div class="field"><label data-fr="Nationalité" data-en="Nationality">Nationalité</label><input type="text" id="pr-nat" placeholder="Ex: Rwandaise"/></div>
+      <div class="field"><label data-fr="Nationalite" data-en="Nationality">Nationalite</label><input type="text" id="pr-nat" placeholder="Ex: Rwandaise"/></div>
     </div>
     <div class="row2">
-      <div class="field"><label data-fr="Téléphone *" data-en="Phone *">Téléphone *</label><input type="tel" id="pr-tel" placeholder="+250 7XX XXX XXX"/></div>
-      <div class="field"><label data-fr="Email" data-en="Email">Email</label><input type="email" id="pr-email" placeholder="name@email.com"/></div>
+      <div class="field"><label data-fr="Telephone *" data-en="Phone *">Telephone *</label><input type="tel" id="pr-tel" placeholder="+250 7XX XXX XXX"/></div>
+      <div class="field"><label data-fr="Email" data-en="Email">Email</label><input type="email" id="pr-email" placeholder="nom@email.com"/></div>
     </div>
-    <div class="field"><label data-fr="Adresse complète *" data-en="Full Address *">Adresse complète *</label><input type="text" id="pr-addr" placeholder="Ex: KG 123 St, Kigali, Rwanda"/></div>
+    <div class="field"><label data-fr="Adresse complete *" data-en="Full Address *">Adresse complete *</label><input type="text" id="pr-addr" placeholder="Ex: KG 123 St, Kigali, Rwanda"/></div>
     <div class="row2">
-      <div class="field"><label data-fr="Niveau d'études" data-en="Education Level">Niveau d'études</label>
+      <div class="field"><label data-fr="Niveau d'etudes" data-en="Education Level">Niveau d'etudes</label>
         <select id="pr-edu">
           <option data-fr="Primaire" data-en="Primary">Primaire</option>
           <option data-fr="Secondaire" data-en="Secondary">Secondaire</option>
@@ -222,19 +231,19 @@
           <option data-fr="Formation professionnelle" data-en="Vocational Training">Formation professionnelle</option>
         </select>
       </div>
-      <div class="field"><label data-fr="Années d'expérience (secteur)" data-en="Years of Experience (sector)">Années d'expérience</label><input type="number" id="pr-exp" placeholder="Ex: 5" min="0"/></div>
+      <div class="field"><label data-fr="Annees d'experience (secteur)" data-en="Years of Experience (sector)">Annees d'experience</label><input type="number" id="pr-exp" placeholder="Ex: 5" min="0"/></div>
     </div>
-    <div class="field"><label data-fr="Expérience et compétences dans le secteur *" data-en="Sector Experience and Skills *">Expérience et compétences dans le secteur *</label><textarea id="pr-expDesc" rows="3" placeholder="Décrivez votre expérience professionnelle dans ce domaine..."></textarea></div>
+    <div class="field"><label data-fr="Experience et competences dans le secteur *" data-en="Sector Experience and Skills *">Experience et competences dans le secteur *</label><textarea id="pr-expDesc" rows="3" placeholder="Decrivez votre experience professionnelle dans ce domaine..."></textarea></div>
   </div>
 
   <div class="subsec">
     <div class="subsec-title" data-fr="Renseignements Financiers du Promoteur" data-en="Promoter Financial Information">Renseignements Financiers du Promoteur</div>
-    <div class="field"><label data-fr="Patrimoine du promoteur (biens, actifs)" data-en="Promoter Assets (property, assets)">Patrimoine du promoteur</label><textarea id="pr-patr" rows="2" placeholder="Ex: Maison propre, terrain 500m2, véhicule..."></textarea></div>
+    <div class="field"><label data-fr="Patrimoine du promoteur (biens, actifs)" data-en="Promoter Assets (property, assets)">Patrimoine du promoteur</label><textarea id="pr-patr" rows="2" placeholder="Ex: Maison propre, terrain 500m2, vehicule..."></textarea></div>
     <div class="row2">
       <div class="field"><label data-fr="Sources de revenus existants" data-en="Existing Income Sources">Sources de revenus existants</label><input type="text" id="pr-rev" placeholder="Ex: Salaire, loyers, commerce..."/></div>
-      <div class="field"><label data-fr="Revenu mensuel net (FRW)" data-en="Net Monthly Income (FRW)">Revenu mensuel net (FRW)</label><input type="number" id="pr-revAmt" placeholder="0" min="0" step="0.01"/></div>
+      <div class="field"><label data-fr="Revenu mensuel net (pi)" data-en="Net Monthly Income (pi)">Revenu mensuel net (pi)</label><input type="number" id="pr-revAmt" placeholder="0" min="0" step="0.01"/></div>
     </div>
-    <div class="field"><label data-fr="Apport propre au projet (FRW) *" data-en="Own Contribution to Project (FRW) *">Apport propre au projet (FRW) *</label><input type="number" id="pr-apport" placeholder="0" min="0" step="0.01" oninput="updateFinancingPlan()"/>
+    <div class="field"><label data-fr="Apport propre au projet (pi) *" data-en="Own Contribution to Project (pi) *">Apport propre au projet (pi) *</label><input type="number" id="pr-apport" placeholder="0" min="0" step="0.01" oninput="updateFinancingPlan()"/>
       <div class="hint" data-fr="Montant que vous investissez personnellement" data-en="Amount you invest personally">Montant que vous investissez personnellement</div>
     </div>
   </div>
@@ -242,7 +251,11 @@
   <button class="btn-primary" onclick="goTo(2)" data-fr="Continuer -- Informations Projet" data-en="Continue -- Project Information">Continuer -- Informations Projet</button>
 </div>
 
+<!-- ═══════════════════════════════════════ -->
+<!-- PANEL 2 — PROJET -->
+<!-- ═══════════════════════════════════════ -->
 <div class="panel" id="panel-2">
+
   <div class="sec-header">
     <div class="sec-num">SECTION 2</div>
     <div class="sec-title" data-fr="Informations sur le <span>Projet</span>" data-en="Information about the <span>Project</span>">Informations sur le <span>Projet</span></div>
@@ -254,21 +267,21 @@
     <div class="row2">
       <div class="field"><label data-fr="Nature du projet *" data-en="Nature of Project *">Nature du projet *</label>
         <select id="pj-nature">
-          <option value="" data-fr="-- Sélectionnez --" data-en="-- Select --">-- Sélectionnez --</option>
-          <option value="creation" data-fr="Création d'entreprise" data-en="Business Creation">Création d'entreprise</option>
+          <option value="" data-fr="-- Selectionnez --" data-en="-- Select --">-- Selectionnez --</option>
+          <option value="creation" data-fr="Creation d'entreprise" data-en="Business Creation">Creation d'entreprise</option>
           <option value="extension" data-fr="Extension/Expansion" data-en="Extension/Expansion">Extension/Expansion</option>
           <option value="modernisation" data-fr="Modernisation" data-en="Modernization">Modernisation</option>
           <option value="diversification" data-fr="Diversification" data-en="Diversification">Diversification</option>
         </select>
       </div>
-      <div class="field"><label data-fr="Secteur d'activité *" data-en="Business Sector *">Secteur d'activité *</label>
+      <div class="field"><label data-fr="Secteur d'activite *" data-en="Business Sector *">Secteur d'activite *</label>
         <select id="pj-secteur">
           <option value="agri" data-fr="Agriculture/Elevage" data-en="Agriculture/Livestock">Agriculture/Elevage</option>
           <option value="restaurant" data-fr="Restauration/Alimentation" data-en="Restaurant/Food">Restauration/Alimentation</option>
-          <option value="commerce" data-fr="Commerce Général" data-en="General Trade">Commerce Général</option>
+          <option value="commerce" data-fr="Commerce General" data-en="General Trade">Commerce General</option>
           <option value="tech" data-fr="Technologie/IT" data-en="Technology/IT">Technologie/IT</option>
           <option value="construction" data-fr="Construction/Immobilier" data-en="Construction/Real Estate">Construction/Immobilier</option>
-          <option value="sante" data-fr="Santé/Médical" data-en="Health/Medical">Santé/Médical</option>
+          <option value="sante" data-fr="Sante/Medical" data-en="Health/Medical">Sante/Medical</option>
           <option value="education" data-fr="Education/Formation" data-en="Education/Training">Education/Formation</option>
           <option value="transport" data-fr="Transport/Logistique" data-en="Transport/Logistics">Transport/Logistique</option>
           <option value="artisanat" data-fr="Artisanat/Manufacture" data-en="Crafts/Manufacturing">Artisanat/Manufacture</option>
@@ -288,7 +301,7 @@
       <div class="field"><label data-fr="Ville/Localisation *" data-en="City/Location *">Ville/Localisation *</label><input type="text" id="pj-ville" placeholder="Ex: Kigali, Nyarugenge"/></div>
     </div>
     <div class="row2">
-      <div class="field"><label data-fr="Durée du projet (mois)" data-en="Project Duration (months)">Durée du projet (mois)</label>
+      <div class="field"><label data-fr="Duree du projet (mois)" data-en="Project Duration (months)">Duree du projet (mois)</label>
         <select id="pj-duree">
           <option value="12">12 mois</option>
           <option value="18" selected>18 mois</option>
@@ -297,53 +310,57 @@
           <option value="60">60 mois (5 ans)</option>
         </select>
       </div>
-      <div class="field"><label data-fr="Date de démarrage prévue" data-en="Expected Start Date">Date de démarrage prévue</label><input type="date" id="pj-start"/></div>
+      <div class="field"><label data-fr="Date de demarrage prevue" data-en="Expected Start Date">Date de demarrage prevue</label><input type="date" id="pj-start"/></div>
     </div>
   </div>
 
   <div class="subsec">
     <div class="subsec-title" data-fr="Description du Projet" data-en="Project Description">Description du Projet</div>
-    <div class="field"><label data-fr="Contexte et justification du projet *" data-en="Project Context and Justification *">Contexte et justification du projet *</label><textarea id="pj-contexte" rows="3" placeholder="Pourquoi ce projet? Quel problème résout-il?"></textarea></div>
-    <div class="field"><label data-fr="Objectifs du projet *" data-en="Project Objectives *">Objectifs du projet *</label><textarea id="pj-objectifs" rows="3" placeholder="Objectifs principaux: chiffre d'affaires, emplois créés, impact social..."></textarea></div>
-    <div class="field"><label data-fr="Description détaillée des activités" data-en="Detailed Activity Description">Description détaillée des activités</label><textarea id="pj-activites" rows="3" placeholder="Décrivez les activités principales de votre projet..."></textarea></div>
-    <div class="field"><label data-fr="Chronologie des activités (étapes clés)" data-en="Activity Timeline (key milestones)">Chronologie des activités</label><textarea id="pj-chrono" rows="2" placeholder="Mois 1-3: Installation, Mois 4: Lancement, Mois 6: Première rentabilité..."></textarea></div>
-    <div class="field"><label data-fr="Faisabilité et durabilité du projet" data-en="Project Feasibility and Sustainability">Faisabilité et durabilité</label><textarea id="pj-faisabilite" rows="2" placeholder="Comment ce projet est-il viable à long terme?"></textarea></div>
+    <div class="field"><label data-fr="Contexte et justification du projet *" data-en="Project Context and Justification *">Contexte et justification du projet *</label><textarea id="pj-contexte" rows="3" placeholder="Pourquoi ce projet? Quel probleme resout-il?"></textarea></div>
+    <div class="field"><label data-fr="Objectifs du projet *" data-en="Project Objectives *">Objectifs du projet *</label><textarea id="pj-objectifs" rows="3" placeholder="Objectifs principaux: chiffre d'affaires, emplois crees, impact social..."></textarea></div>
+    <div class="field"><label data-fr="Description detaillee des activites" data-en="Detailed Activity Description">Description detaillee des activites</label><textarea id="pj-activites" rows="3" placeholder="Decrivez les activites principales de votre projet..."></textarea></div>
+    <div class="field"><label data-fr="Chronologie des activites (etapes cles)" data-en="Activity Timeline (key milestones)">Chronologie des activites</label><textarea id="pj-chrono" rows="2" placeholder="Mois 1-3: Installation, Mois 4: Lancement, Mois 6: Premiere rentabilite..."></textarea></div>
+    <div class="field"><label data-fr="Faisabilite et durabilite du projet" data-en="Project Feasibility and Sustainability">Faisabilite et durabilite</label><textarea id="pj-faisabilite" rows="2" placeholder="Comment ce projet est-il viable a long terme?"></textarea></div>
   </div>
 
   <div class="subsec">
-    <div class="subsec-title" data-fr="Etude de Marché" data-en="Market Study">Etude de Marché</div>
-    <div class="field"><label data-fr="Description du marché cible" data-en="Target Market Description">Description du marché cible</label><textarea id="pj-marche" rows="2" placeholder="Qui sont vos clients? Quelle est la taille du marché?"></textarea></div>
+    <div class="subsec-title" data-fr="Etude de Marche" data-en="Market Study">Etude de Marche</div>
+    <div class="field"><label data-fr="Description du marche cible" data-en="Target Market Description">Description du marche cible</label><textarea id="pj-marche" rows="2" placeholder="Qui sont vos clients? Quelle est la taille du marche?"></textarea></div>
     <div class="row2">
       <div class="field"><label data-fr="Offre actuelle (concurrence)" data-en="Current Supply (competition)">Offre actuelle (concurrence)</label><input type="text" id="pj-offre" placeholder="Ex: 3 restaurants similaires dans la zone"/></div>
-      <div class="field"><label data-fr="Demande estimée" data-en="Estimated Demand">Demande estimée</label><input type="text" id="pj-demande" placeholder="Ex: 200 clients/jour potentiels"/></div>
+      <div class="field"><label data-fr="Demande estimee" data-en="Estimated Demand">Demande estimee</label><input type="text" id="pj-demande" placeholder="Ex: 200 clients/jour potentiels"/></div>
     </div>
     <div class="row2">
-      <div class="field"><label data-fr="Clients actuels" data-en="Current Customers">Clients actuels</label><input type="text" id="pj-clientsAct" placeholder="Ex: Contractés avec 2 hôtels"/></div>
+      <div class="field"><label data-fr="Clients actuels" data-en="Current Customers">Clients actuels</label><input type="text" id="pj-clientsAct" placeholder="Ex: Contractes avec 2 hotels"/></div>
       <div class="field"><label data-fr="Clients potentiels" data-en="Potential Customers">Clients potentiels</label><input type="text" id="pj-clientsPot" placeholder="Ex: Entreprises, ONG, particuliers..."/></div>
     </div>
     <div class="row2">
-      <div class="field"><label data-fr="Prix de vente unitaire (FRW)" data-en="Unit Selling Price (FRW)">Prix unitaire (FRW)</label><input type="number" id="pj-prix" placeholder="1500" min="0" step="1"/></div>
-      <div class="field"><label data-fr="Quantité prévue/mois" data-en="Expected Quantity/Month">Quantité prévue/mois</label><input type="number" id="pj-qte" placeholder="Ex: 500" min="0" oninput="updateRevFromQty()"/></div>
+      <div class="field"><label data-fr="Prix de vente unitaire (pi)" data-en="Unit Selling Price (pi)">Prix unitaire (pi)</label><input type="number" id="pj-prix" placeholder="0.001" min="0" step="0.0001"/></div>
+      <div class="field"><label data-fr="Quantite prevue/mois" data-en="Expected Quantity/Month">Quantite prevue/mois</label><input type="number" id="pj-qte" placeholder="Ex: 500" min="0" oninput="updateRevFromQty()"/></div>
     </div>
-    <div class="field"><label data-fr="Stratégie marketing" data-en="Marketing Strategy">Stratégie marketing</label><textarea id="pj-marketing" rows="2" placeholder="Réseaux sociaux, bouche à oreille, publicité, partenariats..."></textarea></div>
+    <div class="field"><label data-fr="Strategie marketing" data-en="Marketing Strategy">Strategie marketing</label><textarea id="pj-marketing" rows="2" placeholder="Reseaux sociaux, bouche a oreille, publicite, partenariats..."></textarea></div>
   </div>
 
   <button class="btn-primary" onclick="goTo(3)" data-fr="Continuer -- Budget CAPMER" data-en="Continue -- CAPMER Budget">Continuer -- Budget CAPMER</button>
   <button class="btn-secondary" onclick="goTo(1)" data-fr="Retour" data-en="Back">Retour</button>
 </div>
 
+<!-- ═══════════════════════════════════════ -->
+<!-- PANEL 3 — CAPMER -->
+<!-- ═══════════════════════════════════════ -->
 <div class="panel" id="panel-3">
+
   <div class="sec-header">
     <div class="sec-num">SECTION 3</div>
-    <div class="sec-title" data-fr="Coût du Projet &amp; Plan de <span>Financement CAPMER</span>" data-en="Project Cost &amp; <span>CAPMER Financing Plan</span>">Coût du Projet &amp; Plan de <span>Financement CAPMER</span></div>
+    <div class="sec-title" data-fr="Cout du Projet &amp; Plan de <span>Financement CAPMER</span>" data-en="Project Cost &amp; <span>CAPMER Financing Plan</span>">Cout du Projet &amp; Plan de <span>Financement CAPMER</span></div>
   </div>
 
-  <div class="info-note" data-fr="Saisissez tous les montants en Francs Rwandais (FRW). La conversion USD et Pi est calculée automatiquement (taux BNR temps réel + GCV 1pi=$314,159)." data-en="Enter all amounts in Rwandan Francs (FRW). USD and Pi conversion is calculated automatically (BNR real-time rate + GCV 1pi=$314,159).">Saisissez tous les montants en Francs Rwandais (FRW). La conversion USD et Pi est calculée automatiquement (taux BNR temps réel + GCV 1pi=$314,159).</div>
+  <div class="info-note" data-fr="Saisissez tous les montants en Francs Rwandais (FRW). La conversion USD et Pi est calculee automatiquement (taux BNR temps reel + GCV 1pi=$314,159)." data-en="Enter all amounts in Rwandan Francs (FRW). USD and Pi conversion is calculated automatically (BNR real-time rate + GCV 1pi=$314,159).">Saisissez tous les montants en Francs Rwandais (FRW). La conversion USD et Pi est calculee automatiquement (taux BNR temps reel + GCV 1pi=$314,159).</div>
 
   <table class="capmer-table">
     <thead>
       <tr>
-        <th data-fr="Catégorie" data-en="Category">Catégorie</th>
+        <th data-fr="Categorie" data-en="Category">Categorie</th>
         <th data-fr="Description" data-en="Description">Description</th>
         <th>FRW *</th>
         <th>USD</th>
@@ -351,36 +368,35 @@
       </tr>
     </thead>
     <tbody>
-      <tr><td colspan="5" style="background:rgba(74,107,255,0.1);color:var(--pi);font-weight:700;font-size:11px;padding:6px 10px;"><span class="letter-badge">C</span><span data-fr="CAPITAL -- Investissements Initiaux" data-en="CAPITAL -- Initial Investments">CAPITAL -- Initial Investments</span></td></tr>
+      <tr><td colspan="4" style="background:rgba(74,107,255,0.1);color:var(--pi);font-weight:700;font-size:11px;padding:6px 10px;"><span class="letter-badge">C</span><span data-fr="CAPITAL -- Investissements Initiaux" data-en="CAPITAL -- Initial Investments">CAPITAL -- Investissements Initiaux</span></td></tr>
       <tr><td data-fr="Terrain / Local" data-en="Land / Premises">Terrain / Local</td><td><input type="text" id="c1-desc" placeholder="Ex: Location local commercial"/></td><td><input type="number" id="c1" placeholder="0" min="0" step="0.01" oninput="recalc()"/></td><td id="c1-usd" style="color:var(--pi);font-size:11px;">$0</td><td id="c1-pi" style="color:var(--gold);font-size:11px;">0pi</td></tr>
       <tr><td data-fr="Permis / Licences" data-en="Permits / Licenses">Permis / Licences</td><td><input type="text" id="c2-desc" placeholder="Ex: Licence commerciale RDB"/></td><td><input type="number" id="c2" placeholder="0" min="0" step="0.01" oninput="recalc()"/></td><td id="c2-usd" style="color:var(--pi);font-size:11px;">$0</td><td id="c2-pi" style="color:var(--gold);font-size:11px;">0pi</td></tr>
-      <tr><td data-fr="Infrastructure / Aménagement" data-en="Infrastructure / Renovation">Infrastructure</td><td><input type="text" id="c3-desc" placeholder="Ex: Rénovation, construction"/></td><td><input type="number" id="c3" placeholder="0" min="0" step="0.01" oninput="recalc()"/></td><td id="c3-usd" style="color:var(--pi);font-size:11px;">$0</td><td id="c3-pi" style="color:var(--gold);font-size:11px;">0pi</td></tr>
+      <tr><td data-fr="Infrastructure / Amenagement" data-en="Infrastructure / Renovation">Infrastructure</td><td><input type="text" id="c3-desc" placeholder="Ex: Renovation, construction"/></td><td><input type="number" id="c3" placeholder="0" min="0" step="0.01" oninput="recalc()"/></td><td id="c3-usd" style="color:var(--pi);font-size:11px;">$0</td><td id="c3-pi" style="color:var(--gold);font-size:11px;">0pi</td></tr>
 
-      <tr><td colspan="5" style="background:rgba(0,166,81,0.08);color:var(--green);font-weight:700;font-size:11px;padding:6px 10px;"><span class="letter-badge A">A</span><span data-fr="APPROVISIONNEMENT -- Matières & Stocks" data-en="SUPPLIES -- Materials & Stock">APPROVISIONNEMENT -- Matières & Stocks</span></td></tr>
-      <tr><td data-fr="Matières premières" data-en="Raw Materials">Matières premières</td><td><input type="text" id="a1-desc" placeholder="Ex: Ingrédients, produits"/></td><td><input type="number" id="a1" placeholder="0" min="0" step="0.01" oninput="recalc()"/></td><td id="a1-usd" style="color:var(--pi);font-size:11px;">$0</td><td id="a1-pi" style="color:var(--gold);font-size:11px;">0pi</td></tr>
+      <tr><td colspan="4" style="background:rgba(0,166,81,0.08);color:var(--green);font-weight:700;font-size:11px;padding:6px 10px;"><span class="letter-badge A">A</span><span data-fr="APPROVISIONNEMENT -- Matieres & Stocks" data-en="SUPPLIES -- Materials & Stock">APPROVISIONNEMENT -- Matieres & Stocks</span></td></tr>
+      <tr><td data-fr="Matieres premieres" data-en="Raw Materials">Matieres premieres</td><td><input type="text" id="a1-desc" placeholder="Ex: Ingredients, produits"/></td><td><input type="number" id="a1" placeholder="0" min="0" step="0.01" oninput="recalc()"/></td><td id="a1-usd" style="color:var(--pi);font-size:11px;">$0</td><td id="a1-pi" style="color:var(--gold);font-size:11px;">0pi</td></tr>
       <tr><td data-fr="Stock initial" data-en="Initial Stock">Stock initial</td><td><input type="text" id="a2-desc" placeholder="Ex: Marchandises, emballages"/></td><td><input type="number" id="a2" placeholder="0" min="0" step="0.01" oninput="recalc()"/></td><td id="a2-usd" style="color:var(--pi);font-size:11px;">$0</td><td id="a2-pi" style="color:var(--gold);font-size:11px;">0pi</td></tr>
 
-      <tr><td colspan="5" style="background:rgba(230,126,34,0.08);color:var(--orange);font-weight:700;font-size:11px;padding:6px 10px;"><span class="letter-badge P">P</span><span data-fr="PERSONNEL -- Ressources Humaines" data-en="PERSONNEL -- Human Resources">PERSONNEL -- Ressources Humaines</span></td></tr>
-      <tr><td data-fr="Salaires mensuels" data-en="Monthly Salaries">Salaires mensuels</td><td><input type="text" id="p1-desc" placeholder="Ex: 3 employés + manager"/></td><td><input type="number" id="p1" placeholder="0" min="0" step="0.01" oninput="recalc()"/></td><td id="p1-usd" style="color:var(--pi);font-size:11px;">$0</td><td id="p1-pi" style="color:var(--gold);font-size:11px;">0pi</td></tr>
-      <tr><td data-fr="Formation / RH" data-en="Training / HR">Formation / RH</td><td><input type="text" id="p2-desc" placeholder="Ex: Formation culinaire, hygiène"/></td><td><input type="number" id="p2" placeholder="0" min="0" step="0.01" oninput="recalc()"/></td><td id="p2-usd" style="color:var(--pi);font-size:11px;">$0</td><td id="p2-pi" style="color:var(--gold);font-size:11px;">0pi</td></tr>
+      <tr><td colspan="4" style="background:rgba(230,126,34,0.08);color:var(--orange);font-weight:700;font-size:11px;padding:6px 10px;"><span class="letter-badge P">P</span><span data-fr="PERSONNEL -- Ressources Humaines" data-en="PERSONNEL -- Human Resources">PERSONNEL -- Ressources Humaines</span></td></tr>
+      <tr><td data-fr="Salaires mensuels" data-en="Monthly Salaries">Salaires mensuels</td><td><input type="text" id="p1-desc" placeholder="Ex: 3 employes + manager"/></td><td><input type="number" id="p1" placeholder="0" min="0" step="0.01" oninput="recalc()"/></td><td id="p1-usd" style="color:var(--pi);font-size:11px;">$0</td><td id="p1-pi" style="color:var(--gold);font-size:11px;">0pi</td></tr>
+      <tr><td data-fr="Formation / RH" data-en="Training / HR">Formation / RH</td><td><input type="text" id="p2-desc" placeholder="Ex: Formation culinaire, hygiene"/></td><td><input type="number" id="p2" placeholder="0" min="0" step="0.01" oninput="recalc()"/></td><td id="p2-usd" style="color:var(--pi);font-size:11px;">$0</td><td id="p2-pi" style="color:var(--gold);font-size:11px;">0pi</td></tr>
 
-      <tr><td colspan="5" style="background:rgba(142,68,173,0.08);color:#A855F7;font-weight:700;font-size:11px;padding:6px 10px;"><span class="letter-badge M">M</span><span data-fr="MARCHE -- Marketing & Etudes" data-en="MARKET -- Marketing & Research">MARCHE -- Marketing & Etudes</span></td></tr>
-      <tr><td data-fr="Budget marketing" data-en="Marketing Budget">Marketing</td><td><input type="text" id="m1-desc" placeholder="Ex: Réseaux sociaux, flyers"/></td><td><input type="number" id="m1" placeholder="0" min="0" step="0.01" oninput="recalc()"/></td><td id="m1-usd" style="color:var(--pi);font-size:11px;">$0</td><td id="m1-pi" style="color:var(--gold);font-size:11px;">0pi</td></tr>
-      <tr><td data-fr="Etude de marché" data-en="Market Research">Etude de marché</td><td><input type="text" id="m2-desc" placeholder="Ex: Enquêtes, consultant"/></td><td><input type="number" id="m2" placeholder="0" min="0" step="0.01" oninput="recalc()"/></td><td id="m2-usd" style="color:var(--pi);font-size:11px;">$0</td><td id="m2-pi" style="color:var(--gold);font-size:11px;">0pi</td></tr>
+      <tr><td colspan="4" style="background:rgba(142,68,173,0.08);color:#A855F7;font-weight:700;font-size:11px;padding:6px 10px;"><span class="letter-badge M">M</span><span data-fr="MARCHE -- Marketing & Etudes" data-en="MARKET -- Marketing & Research">MARCHE -- Marketing & Etudes</span></td></tr>
+      <tr><td data-fr="Budget marketing" data-en="Marketing Budget">Marketing</td><td><input type="text" id="m1-desc" placeholder="Ex: Reseaux sociaux, flyers"/></td><td><input type="number" id="m1" placeholder="0" min="0" step="0.01" oninput="recalc()"/></td><td id="m1-usd" style="color:var(--pi);font-size:11px;">$0</td><td id="m1-pi" style="color:var(--gold);font-size:11px;">0pi</td></tr>
+      <tr><td data-fr="Etude de marche" data-en="Market Research">Etude de marche</td><td><input type="text" id="m2-desc" placeholder="Ex: Enquetes, consultant"/></td><td><input type="number" id="m2" placeholder="0" min="0" step="0.01" oninput="recalc()"/></td><td id="m2-usd" style="color:var(--pi);font-size:11px;">$0</td><td id="m2-pi" style="color:var(--gold);font-size:11px;">0pi</td></tr>
 
-      <tr><td colspan="5" style="background:rgba(229,62,62,0.08);color:var(--red);font-weight:700;font-size:11px;padding:6px 10px;"><span class="letter-badge E">E</span><span data-fr="EQUIPEMENT -- Matériel & Outils" data-en="EQUIPMENT -- Machinery & Tools">EQUIPEMENT -- Matériel & Outils</span></td></tr>
-      <tr><td data-fr="Equipements principaux" data-en="Main Equipment">Equipements</td><td><input type="text" id="e1-desc" placeholder="Ex: Machines, outils, véhicule"/></td><td><input type="number" id="e1" placeholder="0" min="0" step="0.01" oninput="recalc()"/></td><td id="e1-usd" style="color:var(--pi);font-size:11px;">$0</td><td id="e1-pi" style="color:var(--gold);font-size:11px;">0pi</td></tr>
+      <tr><td colspan="4" style="background:rgba(229,62,62,0.08);color:var(--red);font-weight:700;font-size:11px;padding:6px 10px;"><span class="letter-badge E">E</span><span data-fr="EQUIPEMENT -- Materiel & Outils" data-en="EQUIPMENT -- Machinery & Tools">EQUIPEMENT -- Materiel & Outils</span></td></tr>
+      <tr><td data-fr="Equipements principaux" data-en="Main Equipment">Equipements</td><td><input type="text" id="e1-desc" placeholder="Ex: Machines, outils, vehicule"/></td><td><input type="number" id="e1" placeholder="0" min="0" step="0.01" oninput="recalc()"/></td><td id="e1-usd" style="color:var(--pi);font-size:11px;">$0</td><td id="e1-pi" style="color:var(--gold);font-size:11px;">0pi</td></tr>
       <tr><td data-fr="Maintenance / entretien" data-en="Maintenance">Maintenance</td><td><input type="text" id="e2-desc" placeholder="Ex: Contrat entretien annuel"/></td><td><input type="number" id="e2" placeholder="0" min="0" step="0.01" oninput="recalc()"/></td><td id="e2-usd" style="color:var(--pi);font-size:11px;">$0</td><td id="e2-pi" style="color:var(--gold);font-size:11px;">0pi</td></tr>
 
-      <tr><td colspan="5" style="background:rgba(255,179,0,0.08);color:var(--gold);font-weight:700;font-size:11px;padding:6px 10px;"><span class="letter-badge R">R</span><span data-fr="RENTABILITE -- Recettes & Réserve" data-en="PROFITABILITY -- Revenue & Reserve">RENTABILITE -- Recettes & Réserve</span></td></tr>
-      <tr><td data-fr="Revenu mensuel prévu" data-en="Expected Monthly Revenue">Revenu mensuel prévu</td><td><input type="text" id="r1-desc" placeholder="Ex: Ventes restaurant"/></td><td><input type="number" id="r1" placeholder="0" min="0" step="0.01" oninput="recalc()"/></td><td id="r1-usd" style="color:var(--green);font-size:11px;">$0</td><td id="r1-pi" style="color:var(--gold);font-size:11px;">0pi</td></tr>
-      <tr><td data-fr="Fonds de roulement / Réserve" data-en="Working Capital / Reserve">Fonds de roulement</td><td><input type="text" id="r2-desc" placeholder="Ex: 3 mois de réserve"/></td><td><input type="number" id="r2" placeholder="0" min="0" step="0.01" oninput="recalc()"/></td><td id="r2-usd" style="color:var(--pi);font-size:11px;">$0</td><td id="r2-pi" style="color:var(--gold);font-size:11px;">0pi</td></tr>
+      <tr><td colspan="4" style="background:rgba(255,179,0,0.08);color:var(--gold);font-weight:700;font-size:11px;padding:6px 10px;"><span class="letter-badge R">R</span><span data-fr="RENTABILITE -- Recettes & Reserve" data-en="PROFITABILITY -- Revenue & Reserve">RENTABILITE -- Recettes & Reserve</span></td></tr>
+      <tr><td data-fr="Revenu mensuel prevu" data-en="Expected Monthly Revenue">Revenu mensuel prevu</td><td><input type="text" id="r1-desc" placeholder="Ex: Ventes restaurant"/></td><td><input type="number" id="r1" placeholder="0" min="0" step="0.01" oninput="recalc()"/></td><td id="r1-usd" style="color:var(--green);font-size:11px;">$0</td></tr>
+      <tr><td data-fr="Fonds de roulement / Reserve" data-en="Working Capital / Reserve">Fonds de roulement</td><td><input type="text" id="r2-desc" placeholder="Ex: 3 mois de reserve"/></td><td><input type="number" id="r2" placeholder="0" min="0" step="0.01" oninput="recalc()"/></td><td id="r2-usd" style="color:var(--pi);font-size:11px;">$0</td><td id="r2-pi" style="color:var(--gold);font-size:11px;">0pi</td></tr>
 
       <tr class="total-row">
         <td colspan="2" data-fr="COUT TOTAL DU PROJET" data-en="TOTAL PROJECT COST">COUT TOTAL DU PROJET</td>
         <td id="total-frw">0 FRW</td>
-        <td id="total-usd">$0</td>
-        <td id="total-pi-col">0pi</td>
+        <td id="total-usd">$0</td><td id="total-pi-col">0pi</td>
       </tr>
     </tbody>
   </table>
@@ -388,52 +404,65 @@
   <div class="subsec">
     <div class="subsec-title" data-fr="Plan de Financement" data-en="Financing Plan">Plan de Financement</div>
     <div class="row3">
-      <div class="field"><label data-fr="Apport propre (FRW)" data-en="Own Contribution (FRW)">Apport propre (FRW)</label><input type="number" id="fin-propre" placeholder="0" min="0" step="0.01" oninput="updateFinancingPlan()"/></div>
-      <div class="field"><label data-fr="Financement demandé (FRW)" data-en="Requested Financing (FRW)">Financement demandé (FRW)</label><input type="text" id="fin-credit" placeholder="0" readonly style="color:var(--gold);"/></div>
+      <div class="field"><label data-fr="Apport propre (FRW)" data-en="Own Contribution (FRW)">Apport propre (pi)</label><input type="number" id="fin-propre" placeholder="0" min="0" step="0.01" oninput="updateFinancingPlan()"/></div>
+      <div class="field"><label data-fr="Financement demande (FRW)" data-en="Requested Financing (FRW)">Financement demande (pi)</label><input type="number" id="fin-credit" placeholder="0" min="0" step="0.01" readonly style="color:var(--gold);"/></div>
       <div class="field"><label data-fr="% Apport propre" data-en="% Own Contribution">% Apport propre</label><input type="text" id="fin-pct" readonly style="color:var(--green);"/></div>
     </div>
-    <div class="hint" data-fr="L'apport propre doit être au moins 20% du coût total (exigence bancaire standard)" data-en="Own contribution must be at least 20% of total cost (standard bank requirement)">L'apport propre doit être au moins 20% du coût total (exigence bancaire standard)</div>
+    <div class="hint" data-fr="L'apport propre doit etre au moins 20% du cout total (exigence bancaire standard)" data-en="Own contribution must be at least 20% of total cost (standard bank requirement)">L'apport propre doit etre au moins 20% du cout total (exigence bancaire standard)</div>
   </div>
 
-  <button class="btn-primary" onclick="goTo(4)" data-fr="Calculer la Rentabilité" data-en="Calculate Profitability">Calculer la Rentabilité</button>
+  <button class="btn-primary" onclick="goTo(4)" data-fr="Calculer la Rentabilite" data-en="Calculate Profitability">Calculer la Rentabilite</button>
   <button class="btn-secondary" onclick="goTo(2)" data-fr="Retour" data-en="Back">Retour</button>
 </div>
 
+<!-- ═══════════════════════════════════════ -->
+<!-- PANEL 4 — RENTABILITE -->
+<!-- ═══════════════════════════════════════ -->
 <div class="panel" id="panel-4">
+
   <div class="sec-header">
     <div class="sec-num">SECTION 4</div>
-    <div class="sec-title" data-fr="Evaluation de la <span>Rentabilité</span>" data-en="<span>Profitability</span> Evaluation">Evaluation de la <span>Rentabilité</span></div>
+    <div class="sec-title" data-fr="Evaluation de la <span>Rentabilite</span>" data-en="<span>Profitability</span> Evaluation">Evaluation de la <span>Rentabilite</span></div>
   </div>
 
+  <!-- KPIs -->
   <div class="kpi-grid" id="kpi-grid"></div>
 
+  <!-- Prevision d'exploitation -->
   <div class="subsec">
-    <div class="subsec-title" data-fr="Prévision d'Exploitation (Annuelle)" data-en="Annual Operating Forecast">Prévision d'Exploitation (Annuelle)</div>
+    <div class="subsec-title" data-fr="Prevision d'Exploitation (Annuelle)" data-en="Annual Operating Forecast">Prevision d'Exploitation (Annuelle)</div>
     <table class="result-table" id="exploitation-table"></table>
   </div>
 
+  <!-- Bilan previsionnel -->
   <div class="subsec">
-    <div class="subsec-title" data-fr="Compte d'Exploitation Prévisionnel" data-en="Projected Income Statement">Compte d'Exploitation Prévisionnel</div>
+    <div class="subsec-title" data-fr="Compte d'Exploitation Previsionnel" data-en="Projected Income Statement">Compte d'Exploitation Previsionnel</div>
     <table class="result-table" id="bilan-table"></table>
   </div>
 
+  <!-- Conformite fiscale -->
   <div class="subsec">
-    <div class="subsec-title" data-fr="Conformité Fiscale & Sociale" data-en="Tax & Social Compliance">Conformité Fiscale & Sociale</div>
+    <div class="subsec-title" data-fr="Conformite Fiscale & Sociale" data-en="Tax & Social Compliance">Conformite Fiscale & Sociale</div>
     <div id="fiscal-detail"></div>
   </div>
 
+  <!-- Autres analyses -->
   <div class="subsec">
     <div class="subsec-title" data-fr="Autres Analyses" data-en="Other Analyses">Autres Analyses</div>
     <div id="autres-analyses"></div>
   </div>
 
-  <div class="gcv-note" data-fr="Toutes les valeurs Pi sont des estimations basées sur le GCV (1pi = $314,159). La valeur réelle dépend du taux du marché au moment de la transaction." data-en="All Pi values are estimates based on GCV (1pi = $314,159). Actual value depends on market rate at time of transaction.">Toutes les valeurs Pi sont des estimations basées sur le GCV (1pi = $314,159).</div>
+  <div class="gcv-note" data-fr="Toutes les valeurs Pi sont des estimations basees sur le GCV (1pi = $314,159). La valeur reelle depend du taux du marche au moment de la transaction." data-en="All Pi values are estimates based on GCV (1pi = $314,159). Actual value depends on market rate at time of transaction.">Toutes les valeurs Pi sont des estimations basees sur le GCV (1pi = $314,159).</div>
 
   <button class="btn-primary" onclick="goTo(5)" data-fr="Continuer -- Conclusion" data-en="Continue -- Conclusion">Continuer -- Conclusion</button>
   <button class="btn-secondary" onclick="goTo(3)" data-fr="Retour -- Modifier Budget" data-en="Back -- Edit Budget">Retour -- Modifier Budget</button>
 </div>
 
+<!-- ═══════════════════════════════════════ -->
+<!-- PANEL 5 — CONCLUSION -->
+<!-- ═══════════════════════════════════════ -->
 <div class="panel" id="panel-5">
+
   <div class="sec-header">
     <div class="sec-num">SECTION 5</div>
     <div class="sec-title" data-fr="Conclusion &amp; <span>Recommandations</span>" data-en="Conclusion &amp; <span>Recommendations</span>">Conclusion &amp; <span>Recommandations</span></div>
@@ -441,18 +470,18 @@
 
   <div class="subsec">
     <div class="subsec-title" data-fr="Evaluation des Garanties et du Risque" data-en="Guarantee & Risk Assessment">Evaluation des Garanties et du Risque</div>
-    <div class="field"><label data-fr="Garanties proposées (caution, hypothèque, nantissement...)" data-en="Proposed Guarantees (surety, mortgage, pledge...)">Garanties proposées</label><textarea id="con-garanties" rows="2" placeholder="Ex: Hypothèque sur maison propre (valeur 80pi), caution solidaire..."></textarea></div>
-    <div class="field"><label data-fr="Risques identifiés et mesures d'atténuation" data-en="Identified Risks and Mitigation Measures">Risques identifiés et mesures d'atténuation</label><textarea id="con-risques" rows="2" placeholder="Ex: Risque de marché --> stratégie de diversification clientèle..."></textarea></div>
+    <div class="field"><label data-fr="Garanties proposees (caution, hypotheque, nantissement...)" data-en="Proposed Guarantees (surety, mortgage, pledge...)">Garanties proposees</label><textarea id="con-garanties" rows="2" placeholder="Ex: Hypotheque sur maison propre (valeur 80pi), caution solidaire..."></textarea></div>
+    <div class="field"><label data-fr="Risques identifies et mesures d'attenuation" data-en="Identified Risks and Mitigation Measures">Risques identifies et mesures d'attenuation</label><textarea id="con-risques" rows="2" placeholder="Ex: Risque de marche --> strategie de diversification clientele..."></textarea></div>
   </div>
 
   <div class="subsec">
     <div class="subsec-title" data-fr="Effets Socio-Economiques" data-en="Socio-Economic Effects">Effets Socio-Economiques</div>
     <div class="row2">
-      <div class="field"><label data-fr="Emplois directs créés" data-en="Direct Jobs Created">Emplois directs créés</label><input type="number" id="con-emplois" placeholder="Ex: 5" min="0"/></div>
+      <div class="field"><label data-fr="Emplois directs crees" data-en="Direct Jobs Created">Emplois directs crees</label><input type="number" id="con-emplois" placeholder="Ex: 5" min="0"/></div>
       <div class="field"><label data-fr="Emplois indirects" data-en="Indirect Jobs">Emplois indirects</label><input type="number" id="con-emploisI" placeholder="Ex: 10" min="0"/></div>
     </div>
-    <div class="field"><label data-fr="Impact social et économique attendu" data-en="Expected Social & Economic Impact">Impact social et économique attendu</label><textarea id="con-impact" rows="2" placeholder="Ex: Réduction du chômage local, formation de jeunes, approvisionnement local..."></textarea></div>
-    <div class="field"><label data-fr="Rentabilité sociale (bénéfices pour la communauté)" data-en="Social Profitability (community benefits)">Rentabilité sociale</label><textarea id="con-rentSoc" rows="2" placeholder="Ex: Amélioration alimentation locale, soutien aux agriculteurs locaux..."></textarea></div>
+    <div class="field"><label data-fr="Impact social et economique attendu" data-en="Expected Social & Economic Impact">Impact social et economique attendu</label><textarea id="con-impact" rows="2" placeholder="Ex: Reduction du chomage local, formation de jeunes, approvisionnement local..."></textarea></div>
+    <div class="field"><label data-fr="Rentabilite sociale (benefices pour la communaute)" data-en="Social Profitability (community benefits)">Rentabilite sociale</label><textarea id="con-rentSoc" rows="2" placeholder="Ex: Amelioration alimentation locale, soutien aux agriculteurs locaux..."></textarea></div>
   </div>
 
   <div class="subsec">
@@ -462,13 +491,13 @@
 
   <div class="subsec">
     <div class="subsec-title" data-fr="Conclusion et Recommandation de l'Analyste" data-en="Analyst Conclusion and Recommendation">Conclusion et Recommandation</div>
-    <div class="field"><label data-fr="Commentaires / Points forts du projet" data-en="Comments / Project Strengths">Commentaires / Points forts du projet</label><textarea id="con-commentaires" rows="3" placeholder="Décrivez les atouts majeurs de votre projet et pourquoi il mérite un financement..."></textarea></div>
+    <div class="field"><label data-fr="Commentaires / Points forts du projet" data-en="Comments / Project Strengths">Commentaires / Points forts du projet</label><textarea id="con-commentaires" rows="3" placeholder="Decrivez les atouts majeurs de votre projet et pourquoi il merite un financement..."></textarea></div>
     <div class="field"><label data-fr="Recommandation finale" data-en="Final Recommendation">Recommandation finale</label>
       <select id="con-reco">
-        <option value="favorable" data-fr="Favorable -- Financement recommandé" data-en="Favorable -- Financing recommended">Favorable -- Financement recommandé</option>
-        <option value="reserve" data-fr="Favorable avec réserves" data-en="Favorable with reservations">Favorable avec réserves</option>
-        <option value="attente" data-fr="En attente d'informations complémentaires" data-en="Pending additional information">En attente d'informations complémentaires</option>
-        <option value="défavorable" data-fr="Défavorable" data-en="Unfavorable">Défavorable</option>
+        <option value="favorable" data-fr="Favorable -- Financement recommande" data-en="Favorable -- Financing recommended">Favorable -- Financement recommande</option>
+        <option value="reserve" data-fr="Favorable avec reserves" data-en="Favorable with reservations">Favorable avec reserves</option>
+        <option value="attente" data-fr="En attente d'informations complementaires" data-en="Pending additional information">En attente d'informations complementaires</option>
+        <option value="defavorable" data-fr="Defavorable" data-en="Unfavorable">Defavorable</option>
       </select>
     </div>
   </div>
@@ -477,7 +506,11 @@
   <button class="btn-secondary" onclick="goTo(4)" data-fr="Retour" data-en="Back">Retour</button>
 </div>
 
+<!-- ═══════════════════════════════════════ -->
+<!-- PANEL 6 — PAIEMENT -->
+<!-- ═══════════════════════════════════════ -->
 <div class="panel" id="panel-6">
+
   <div class="sec-header">
     <div class="sec-num">SECTION 6</div>
     <div class="sec-title" data-fr="Rapport <span>Deep Study</span>" data-en="<span>Deep Study</span> Report">Rapport <span>Deep Study</span></div>
@@ -485,27 +518,27 @@
 
   <div class="subsec">
     <div class="subsec-title" data-fr="Contenu du Rapport Bankable" data-en="Bankable Report Content">Contenu du Rapport Bankable</div>
-    <div class="ds-item"><span class="ds-check">✓</span><span data-fr="Résumé exécutif du projet" data-en="Project Executive Summary">Résumé exécutif du projet</span></div>
-    <div class="ds-item"><span class="ds-check">✓</span><span data-fr="Dossier complet promoteur et projet" data-en="Complete promoter and project file">Dossier complet promoter and project file</span></div>
-    <div class="ds-item"><span class="ds-check">✓</span><span data-fr="Analyse CAPMER détaillée" data-en="Detailed CAPMER analysis">Analyse CAPMER détaillée</span></div>
-    <div class="ds-item"><span class="ds-check">✓</span><span data-fr="Prévisions d'exploitation sur 3 ans" data-en="3-year operating forecasts">Prévisions d'exploitation sur 3 ans</span></div>
-    <div class="ds-item"><span class="ds-check">✓</span><span data-fr="Bilans et compte de résultats prévisionnels" data-en="Projected balance sheets and income statements">Bilans et compte de résultats prévisionnels</span></div>
-    <div class="ds-item"><span class="ds-check">✓</span><span data-fr="KPIs: ROI, TRI, RCSD, Seuil de rentabilité" data-en="KPIs: ROI, IRR, DSCR, Break-even">KPIs: ROI, IRR, DSCR, Break-even</span></div>
+    <div class="ds-item"><span class="ds-check">✓</span><span data-fr="Resume executif du projet" data-en="Project Executive Summary">Resume executif du projet</span></div>
+    <div class="ds-item"><span class="ds-check">✓</span><span data-fr="Dossier complet promoteur et projet" data-en="Complete promoter and project file">Dossier complet promoteur et projet</span></div>
+    <div class="ds-item"><span class="ds-check">✓</span><span data-fr="Analyse CAPMER detaillee" data-en="Detailed CAPMER analysis">Analyse CAPMER detaillee</span></div>
+    <div class="ds-item"><span class="ds-check">✓</span><span data-fr="Previsions d'exploitation sur 3 ans" data-en="3-year operating forecasts">Previsions d'exploitation sur 3 ans</span></div>
+    <div class="ds-item"><span class="ds-check">✓</span><span data-fr="Bilans et compte de resultats previsionnels" data-en="Projected balance sheets and income statements">Bilans et compte de resultats previsionnels</span></div>
+    <div class="ds-item"><span class="ds-check">✓</span><span data-fr="KPIs: ROI, TRI, RCSD, Seuil de rentabilite" data-en="KPIs: ROI, IRR, DSCR, Break-even">KPIs: ROI, TRI, RCSD, Seuil de rentabilite</span></div>
     <div class="ds-item"><span class="ds-check">✓</span><span data-fr="Tableau des Emplois et Ressources" data-en="Employment and Resources Table">Tableau des Emplois et Ressources</span></div>
     <div class="ds-item"><span class="ds-check">✓</span><span data-fr="Evaluation garanties et risques" data-en="Guarantee and risk assessment">Evaluation garanties et risques</span></div>
-    <div class="ds-item"><span class="ds-check">✓</span><span data-fr="Conformité fiscale (RRA/KRA/IRS)" data-en="Tax compliance (RRA/KRA/IRS)">Conformité fiscale (RRA/KRA/IRS)</span></div>
-    <div class="ds-item"><span class="ds-check">✓</span><span data-fr="Effets socio-économiques" data-en="Socio-economic effects">Effets socio-économiques</span></div>
-    <div class="ds-item"><span class="ds-check">✓</span><span data-fr="Format PDF bankable -- prêt pour soumission bancaire" data-en="Bankable PDF format -- ready for bank submission">Format PDF bankable -- ready for bank submission</span></div>
+    <div class="ds-item"><span class="ds-check">✓</span><span data-fr="Conformite fiscale (RRA/KRA/IRS)" data-en="Tax compliance (RRA/KRA/IRS)">Conformite fiscale (RRA/KRA/IRS)</span></div>
+    <div class="ds-item"><span class="ds-check">✓</span><span data-fr="Effets socio-economiques" data-en="Socio-economic effects">Effets socio-economiques</span></div>
+    <div class="ds-item"><span class="ds-check">✓</span><span data-fr="Format PDF bankable -- pret pour soumission bancaire" data-en="Bankable PDF format -- ready for bank submission">Format PDF bankable -- pret pour soumission bancaire</span></div>
     <div class="ds-item"><span class="ds-check">✓</span><span data-fr="Livraison dans les 7 jours ouvrables" data-en="Delivery within 7 business days">Livraison dans les 7 jours ouvrables</span></div>
   </div>
 
   <div class="gcv-note">
     <strong data-fr="Frais : 3pi" data-en="Fee: 3pi">Frais : 3pi</strong><br/>
     ~$942,477 (ref. GCV $314,159/pi) | ~1,225,220,000 FRW<br/>
-    <span data-fr="Les prix USD/FRW sont des estimations basées sur le GCV." data-en="USD/FRW prices are estimates based on GCV.">Les prix USD/FRW sont des estimations basées sur le GCV.</span>
+    <span data-fr="Les prix USD/FRW sont des estimations basees sur le GCV." data-en="USD/FRW prices are estimates based on GCV.">Les prix USD/FRW sont des estimations basees sur le GCV.</span>
   </div>
 
-  <div class="legal-note" data-fr="Le rapport PiBusiness Plan est un outil d'aide à la décision. Consultez un conseiller financier agréé ou un expert-comptable pour la validation officielle et le dépôt auprès des autorités fiscales (RRA, KRA, IRS)." data-en="The PiBusiness Plan report is a decision-support tool. Consult a licensed financial advisor or accountant for official validation and filing with tax authorities (RRA, KRA, IRS).">Le rapport PiBusiness Plan est un outil d'aide à la décision. Consultez un conseiller financier agréé ou un expert-comptable pour la validation officielle.</div>
+  <div class="legal-note" data-fr="Le rapport SmartBiz est un outil d'aide a la decision. Consultez un conseiller financier agree ou un expert-comptable pour la validation officielle et le depot aupres des autorites fiscales (RRA, KRA, IRS)." data-en="The SmartBiz report is a decision-support tool. Consult a licensed financial advisor or accountant for official validation and filing with tax authorities (RRA, KRA, IRS).">Le rapport SmartBiz est un outil d'aide a la decision. Consultez un conseiller financier agree ou un expert-comptable pour la validation officielle.</div>
 
   <div class="chk-row">
     <input type="checkbox" id="chk1"/>
@@ -520,18 +553,21 @@
   <button class="btn-secondary" onclick="goTo(5)" data-fr="Retour" data-en="Back">Retour</button>
 </div>
 
-</div><div class="success-panel" id="success-panel">
+</div><!-- end form-wrap -->
+
+<!-- SUCCESS -->
+<div class="success-panel" id="success-panel">
   <div class="success-icon">🎉</div>
-  <div class="success-title" data-fr="Rapport Commandé!" data-en="Report Ordered!">Rapport Commandé!</div>
-  <div class="success-sub" data-fr="Votre rapport PiBusiness Plan complet et bankable sera livré dans les 7 jours ouvrables à votre adresse email." data-en="Your complete bankable PiBusiness Plan report will be delivered within 7 business days to your email address.">Votre rapport PiBusiness Plan complet et bankable sera livré dans les 7 jours ouvrables.</div>
+  <div class="success-title" data-fr="Rapport Commande!" data-en="Report Ordered!">Rapport Commande!</div>
+  <div class="success-sub" data-fr="Votre rapport SmartBiz complet et bankable sera livre dans les 7 jours ouvrables a votre adresse email." data-en="Your complete bankable SmartBiz report will be delivered within 7 business days to your email address.">Votre rapport SmartBiz complet et bankable sera livre dans les 7 jours ouvrables.</div>
   <div class="txid-box" id="txid-display">TXID: --</div>
   <div class="subsec" style="text-align:left;margin:0 auto;max-width:400px;">
     <div class="subsec-title" data-fr="Confirmation" data-en="Confirmation">Confirmation</div>
-    <div class="ds-item"><span class="ds-check">✓</span><span data-fr="Paiement confirmé: 3pi" data-en="Payment confirmed: 3pi">Paiement confirmé: 3pi</span></div>
-    <div class="ds-item"><span class="ds-check">✓</span><span data-fr="Rapport en cours de préparation" data-en="Report being prepared">Rapport en cours de préparation</span></div>
+    <div class="ds-item"><span class="ds-check">✓</span><span data-fr="Paiement confirme: 3pi" data-en="Payment confirmed: 3pi">Paiement confirme: 3pi</span></div>
+    <div class="ds-item"><span class="ds-check">✓</span><span data-fr="Rapport en cours de preparation" data-en="Report being prepared">Rapport en cours de preparation</span></div>
     <div class="ds-item"><span class="ds-check">✓</span><span data-fr="Livraison: 7 jours ouvrables" data-en="Delivery: 7 business days">Livraison: 7 jours ouvrables</span></div>
   </div>
-  <button class="btn-primary" onclick="window.location.href='index.html'" style="max-width:320px;margin:20px auto 0;display:block" data-fr="Retour à PiVitaFlow" data-en="Back to PiVitaFlow">Retour à PiVitaFlow</button>
+  <button class="btn-primary" onclick="window.location.href='index.html'" style="max-width:320px;margin:20px auto 0;display:block" data-fr="Retour a VitaNova" data-en="Back to VitaNova">Retour a VitaNova</button>
 </div>
 
 <div id="toast"></div>
@@ -566,7 +602,7 @@ let currentStep = 1;
 let lang = 'fr';
 
 // ── Pi Auth ──
-class PiService {
+class AuthService {
   constructor(){ this.user=null; this.accessToken=null; }
   onIncompletePaymentFound(p){ console.warn("Incomplete:",p.identifier); }
   async login(scopes){
@@ -578,7 +614,7 @@ class PiService {
     }catch(e){return {success:false,error:e.message};}
   }
 }
-const piService = new PiService();
+const piService = new AuthService();
 
 window.addEventListener("load", async()=>{
   await fetchBNRRate(); // Fetch BNR rate first
@@ -596,16 +632,19 @@ window.addEventListener("load", async()=>{
 // ── Language ──
 function setLang(l){
   lang = l;
-  // Update button styles
   const btnFr = document.getElementById("btn-fr");
   const btnEn = document.getElementById("btn-en");
   if(btnFr && btnEn){
     if(lang==='fr'){
-      btnFr.style.background="rgba(0,166,81,0.3)"; btnFr.style.borderColor="var(--green)"; btnFr.style.color="var(--green)";
-      btnEn.style.background="rgba(255,179,0,0.12)"; btnEn.style.borderColor="var(--gold)"; btnEn.style.color="var(--gold)";
+      // FR actif - vert
+      btnFr.style.cssText="padding:7px 14px;border-radius:7px;font-size:13px;font-weight:800;cursor:pointer;border:2px solid var(--green);background:rgba(0,166,81,0.3);color:var(--green);";
+      // EN inactif - gris
+      btnEn.style.cssText="padding:7px 14px;border-radius:7px;font-size:13px;font-weight:700;cursor:pointer;border:2px solid #444;background:transparent;color:var(--muted);";
     } else {
-      btnEn.style.background="rgba(74,107,255,0.3)"; btnEn.style.borderColor="var(--pi)"; btnEn.style.color="var(--pi)";
-      btnFr.style.background="rgba(255,179,0,0.12)"; btnFr.style.borderColor="var(--gold)"; btnFr.style.color="var(--gold)";
+      // EN actif - bleu
+      btnEn.style.cssText="padding:7px 14px;border-radius:7px;font-size:13px;font-weight:800;cursor:pointer;border:2px solid var(--pi);background:rgba(74,107,255,0.3);color:var(--pi);";
+      // FR inactif - gris
+      btnFr.style.cssText="padding:7px 14px;border-radius:7px;font-size:13px;font-weight:700;cursor:pointer;border:2px solid #444;background:transparent;color:var(--muted);";
     }
   }
   applyLang();
@@ -654,18 +693,18 @@ function validate(n){
   };
   if(n===1){
     if(!req("pr-nom", lang==='fr'?"Entrez votre nom complet":"Enter your full name")) return false;
-    if(!req("pr-tel", lang==='fr'?"Entrez votre téléphone":"Enter your phone")) return false;
+    if(!req("pr-tel", lang==='fr'?"Entrez votre telephone":"Enter your phone")) return false;
     if(!req("pr-addr", lang==='fr'?"Entrez votre adresse":"Enter your address")) return false;
     return true;
   }
   if(n===2){
     if(!req("pj-nom", lang==='fr'?"Entrez le nom du projet":"Enter project name")) return false;
-    if(!document.getElementById("pj-nature").value){toast(lang==='fr'?"Sélectionnez la nature du projet":"Select project nature",true);return false;}
+    if(!document.getElementById("pj-nature").value){toast(lang==='fr'?"Selectionnez la nature du projet":"Select project nature",true);return false;}
     return true;
   }
   if(n===3){
     const rev=parseFloat(document.getElementById("r1").value||0);
-    if(rev===0){toast(lang==='fr'?"Entrez le revenu mensuel prévu":"Enter expected monthly revenue",true);return false;}
+    if(rev===0){toast(lang==='fr'?"Entrez le revenu mensuel prevu":"Enter expected monthly revenue",true);return false;}
     return true;
   }
   if(n===6){
@@ -679,13 +718,15 @@ function validate(n){
 
 // ── CAPMER Recalc ──
 function v(id){
+  // Returns FRW value of field
   return parseFloat(document.getElementById(id)?.value||0);
 }
 function vPi(id){ return frwToPi(v(id)); }
 function vUsd(id){ return frwToUsd(v(id)); }
-function usd(piValue){return piValue>0?"$"+(piValue*GCV).toLocaleString(undefined,{maximumFractionDigits:0}):"$0";}
+function usd(pi){return pi>0?"$"+(pi*GCV).toLocaleString(undefined,{maximumFractionDigits:0}):"$0";}
 
 function recalc(){
+  // All inputs are in FRW → convert to USD and Pi
   ["c1","c2","c3","a1","a2","p1","p2","m1","m2","e1","e2","r1","r2"].forEach(id=>{
     const frw = v(id);
     const usdEl = document.getElementById(id+"-usd");
@@ -704,7 +745,7 @@ function recalc(){
 function updateFinancingPlan(){
   const totalFRW = v("c1")+v("c2")+v("c3")+v("a1")+v("a2")+v("p1")+v("p2")+
                    v("m1")+v("m2")+v("e1")+v("e2")+v("r2");
-  const apportFRW = v("fin-propre") || v("pr-apport") || 0;
+  const apportFRW = v("fin-propre")||v("pr-apport")||0;
   const creditFRW = Math.max(0, totalFRW - apportFRW);
   const pct = totalFRW>0 ? ((apportFRW/totalFRW)*100).toFixed(1) : "0.0";
   const creditEl=document.getElementById("fin-credit");
@@ -718,17 +759,12 @@ function updateFinancingPlan(){
 
 // ── Build Results (Panel 4) ──
 function buildResults(){
+  // All values in FRW — convert to Pi for KPI calculations
   const totalFRW = v("c1")+v("c2")+v("c3")+v("a1")+v("a2")+v("p1")+v("p2")+
                    v("m1")+v("m2")+v("e1")+v("e2")+v("r2");
-  const totalInv = frwToPi(totalFRW); // total investment in Pi
-  const revM  = frwToPi(v("r1")); // monthly revenue in Pi
-
-  // CRITICAL FIX: Convert charges in FRW to Pi BEFORE summing and evaluating
-  const staffM = frwToPi(v("p1"));
-  const marketingM = frwToPi(v("m1"));
-  const maintenanceM = frwToPi(v("e2"));
-  const opsM = staffM + marketingM + maintenanceM;
-
+  const totalInv = frwToPi(totalFRW); // in Pi for KPI
+  const revM  = frwToPi(v("r1")); // Monthly revenue in Pi
+  const opsM  = v("p1")+v("m1")+v("e2");
   const profM = revM - opsM;
   const profA = profM * 12;
   const dur   = parseInt(document.getElementById("pj-duree").value||18);
@@ -745,26 +781,26 @@ function buildResults(){
   const breakEv  = profM>0 ? Math.ceil(totalInv/profM) : 999;
   const dscr     = opsM>0 ? (revM/opsM) : 0;
   const margin   = revM>0 ? ((profM/revM)*100) : 0;
-  const tri      = roi * 0.85; 
+  const tri      = roi * 0.85; // simplified IRR estimate
   const payback  = netA>0 ? (totalInv/netA) : 999;
 
   // KPI Cards
   const kpiData = [
     {val:roi.toFixed(1)+"%", lbl:lang==='fr'?"ROI Annuel":"Annual ROI", color:roi>20?"green":roi>0?"gold":"red",
      status:roi>20?(lang==='fr'?"Excellent":"Excellent"):roi>10?(lang==='fr'?"Bon":"Good"):(lang==='fr'?"Faible":"Low")},
-    {val:breakEv<999?breakEv+(lang==='fr'?" mois":" months"):"N/A", lbl:lang==='fr'?"Seuil de Rentabilité":"Break-even Point",
+    {val:breakEv<999?breakEv+(lang==='fr'?" mois":" months"):"N/A", lbl:lang==='fr'?"Seuil de Rentabilite":"Break-even Point",
      color:breakEv<=dur?"green":breakEv<=dur*1.5?"gold":"red",
-     status:breakEv<=dur?(lang==='fr'?"Dans la durée":"Within duration"):(lang==='fr'?"Hors durée":"Beyond duration")},
+     status:breakEv<=dur?(lang==='fr'?"Dans la duree":"Within duration"):(lang==='fr'?"Hors duree":"Beyond duration")},
     {val:dscr.toFixed(2), lbl:"RCSD / DSCR",
      color:dscr>=1.25?"green":dscr>=1?"gold":"red",
      status:dscr>=1.25?(lang==='fr'?"Bankable":"Bankable"):dscr>=1?(lang==='fr'?"Marginal":"Marginal"):(lang==='fr'?"Non bankable":"Not bankable")},
     {val:margin.toFixed(1)+"%", lbl:lang==='fr'?"Marge Nette":"Net Margin",
      color:margin>30?"green":margin>10?"gold":"red",
-     status:margin>30?(lang==='fr'?"Très bonne":"Very good"):margin>10?(lang==='fr'?"Acceptable":"Acceptable"):(lang==='fr'?"Faible":"Low")},
+     status:margin>30?(lang==='fr'?"Tres bonne":"Very good"):margin>10?(lang==='fr'?"Acceptable":"Acceptable"):(lang==='fr'?"Faible":"Low")},
     {val:tri.toFixed(1)+"%", lbl:"TRI / IRR",
      color:tri>15?"green":tri>8?"gold":"red",
      status:tri>15?(lang==='fr'?"Attrayant":"Attractive"):tri>8?(lang==='fr'?"Acceptable":"Acceptable"):(lang==='fr'?"Faible":"Low")},
-    {val:payback<999?payback.toFixed(1)+(lang==='fr'?" ans":" yrs"):"N/A", lbl:lang==='fr'?"Temps de Récupération":"Capital Recovery",
+    {val:payback<999?payback.toFixed(1)+(lang==='fr'?" ans":" yrs"):"N/A", lbl:lang==='fr'?"Temps de Recuperation":"Capital Recovery",
      color:payback<3?"green":payback<5?"gold":"red",
      status:payback<3?(lang==='fr'?"Rapide":"Fast"):payback<5?(lang==='fr'?"Acceptable":"Acceptable"):(lang==='fr'?"Lent":"Slow")},
   ];
@@ -783,39 +819,39 @@ function buildResults(){
   document.getElementById("exploitation-table").innerHTML=`
     <tr><th>${lf?"Poste":"Item"}</th><th>${lf?"Mensuel (pi)":"Monthly (pi)"}</th><th>${lf?"Annuel (pi)":"Annual (pi)"}</th><th>USD (ref.GCV)</th></tr>
     <tr class="section-row"><td colspan="4">${lf?"RECETTES":"REVENUE"}</td></tr>
-    <tr><td>${lf?"Chiffre d'affaires":"Revenue"}</td><td class="green">${revM.toFixed(6)}</td><td class="green">${(revM*12).toFixed(6)}</td><td class="green">${usd(revM*12)}</td></tr>
+    <tr><td>${lf?"Chiffre d'affaires":"Revenue"}</td><td class="green">${revM.toFixed(2)}</td><td class="green">${(revM*12).toFixed(2)}</td><td class="green">${usd(revM*12)}</td></tr>
     <tr class="section-row"><td colspan="4">${lf?"CHARGES D'EXPLOITATION":"OPERATING COSTS"}</td></tr>
-    <tr><td>${lf?"Salaires & Personnel":"Salaries & Personnel"}</td><td>${staffM.toFixed(6)}</td><td>${(staffM*12).toFixed(6)}</td><td>${usd(staffM*12)}</td></tr>
-    <tr><td>${lf?"Marketing":"Marketing"}</td><td>${marketingM.toFixed(6)}</td><td>${(marketingM*12).toFixed(6)}</td><td>${usd(marketingM*12)}</td></tr>
-    <tr><td>${lf?"Maintenance":"Maintenance"}</td><td>${maintenanceM.toFixed(6)}</td><td>${(maintenanceM*12).toFixed(6)}</td><td>${usd(maintenanceM*12)}</td></tr>
-    <tr><td><strong>${lf?"TOTAL CHARGES":"TOTAL COSTS"}</strong></td><td class="red"><strong>${opsM.toFixed(6)}</strong></td><td class="red"><strong>${(opsM*12).toFixed(6)}</strong></td><td class="red"><strong>${usd(opsM*12)}</strong></td></tr>
+    <tr><td>${lf?"Salaires & Personnel":"Salaries & Personnel"}</td><td>${v("p1").toFixed(2)}</td><td>${(v("p1")*12).toFixed(2)}</td><td>${usd(v("p1")*12)}</td></tr>
+    <tr><td>${lf?"Marketing":"Marketing"}</td><td>${v("m1").toFixed(2)}</td><td>${(v("m1")*12).toFixed(2)}</td><td>${usd(v("m1")*12)}</td></tr>
+    <tr><td>${lf?"Maintenance":"Maintenance"}</td><td>${v("e2").toFixed(2)}</td><td>${(v("e2")*12).toFixed(2)}</td><td>${usd(v("e2")*12)}</td></tr>
+    <tr><td><strong>${lf?"TOTAL CHARGES":"TOTAL COSTS"}</strong></td><td class="red"><strong>${opsM.toFixed(2)}</strong></td><td class="red"><strong>${(opsM*12).toFixed(2)}</strong></td><td class="red"><strong>${usd(opsM*12)}</strong></td></tr>
     <tr class="section-row"><td colspan="4">${lf?"RESULTAT":"RESULT"}</td></tr>
-    <tr><td><strong>${lf?"Bénéfice Brut":"Gross Profit"}</strong></td><td class="${profM>0?'green':'red'}"><strong>${profM.toFixed(6)}</strong></td><td class="${profA>0?'green':'red'}"><strong>${profA.toFixed(6)}</strong></td><td class="${profA>0?'green':'red'}"><strong>${usd(profA)}</strong></td></tr>
-    <tr><td>${lf?"Impôts ("+Math.round(taxRate*100)+"% CIT)":"Tax ("+Math.round(taxRate*100)+"% CIT)"}</td><td class="red">-${(taxA/12).toFixed(6)}</td><td class="red">-${taxA.toFixed(6)}</td><td class="red">-${usd(taxA)}</td></tr>
-    <tr><td><strong>${lf?"BENEFICE NET":"NET PROFIT"}</strong></td><td class="${netA>0?'gold':'red'}"><strong>${(netA/12).toFixed(6)}</strong></td><td class="${netA>0?'gold':'red'}"><strong>${netA.toFixed(6)}</strong></td><td class="${netA>0?'gold':'red'}"><strong>${usd(netA)}</strong></td></tr>
+    <tr><td><strong>${lf?"Benefice Brut":"Gross Profit"}</strong></td><td class="${profM>0?'green':'red'}"><strong>${profM.toFixed(2)}</strong></td><td class="${profA>0?'green':'red'}"><strong>${profA.toFixed(2)}</strong></td><td class="${profA>0?'green':'red'}"><strong>${usd(profA)}</strong></td></tr>
+    <tr><td>${lf?"Impots ("+Math.round(taxRate*100)+"% CIT)":"Tax ("+Math.round(taxRate*100)+"% CIT)"}</td><td class="red">-${(taxA/12).toFixed(2)}</td><td class="red">-${taxA.toFixed(2)}</td><td class="red">-${usd(taxA)}</td></tr>
+    <tr><td><strong>${lf?"BENEFICE NET":"NET PROFIT"}</strong></td><td class="${netA>0?'gold':'red'}"><strong>${(netA/12).toFixed(2)}</strong></td><td class="${netA>0?'gold':'red'}"><strong>${netA.toFixed(2)}</strong></td><td class="${netA>0?'gold':'red'}"><strong>${usd(netA)}</strong></td></tr>
   `;
 
-  // Bilan prévisionnel
-  const apport = frwToPi(v("fin-propre") || v("pr-apport") || 0);
+  // Bilan previsionnel
+  const apport = v("fin-propre")||v("pr-apport")||0;
   const credit = Math.max(0, totalInv - apport);
   document.getElementById("bilan-table").innerHTML=`
     <tr><th>${lf?"EMPLOIS (Actif)":"USES (Assets)"}</th><th>pi</th><th>${lf?"RESSOURCES (Passif)":"SOURCES (Liabilities)"}</th><th>pi</th></tr>
-    <tr><td>${lf?"Immobilisations":"Fixed Assets"}</td><td>${frwToPi(v("c1")+v("c2")+v("c3")+v("e1")).toFixed(6)}</td><td>${lf?"Apport propre":"Own Contribution"}</td><td class="green">${apport.toFixed(6)}</td></tr>
-    <tr><td>${lf?"Stocks":"Inventory"}</td><td>${frwToPi(v("a1")+v("a2")).toFixed(6)}</td><td>${lf?"Crédit demandé":"Requested Credit"}</td><td class="gold">${credit.toFixed(6)}</td></tr>
-    <tr><td>${lf?"Fonds de roulement":"Working Capital"}</td><td>${frwToPi(v("r2")).toFixed(6)}</td><td></td><td></td></tr>
-    <tr><td><strong>TOTAL</strong></td><td class="gold"><strong>${totalInv.toFixed(6)}</strong></td><td><strong>TOTAL</strong></td><td class="gold"><strong>${totalInv.toFixed(6)}</strong></td></tr>
+    <tr><td>${lf?"Immobilisations":"Fixed Assets"}</td><td>${(v("c1")+v("c2")+v("c3")+v("e1")).toFixed(2)}</td><td>${lf?"Apport propre":"Own Contribution"}</td><td class="green">${apport.toFixed(2)}</td></tr>
+    <tr><td>${lf?"Stocks":"Inventory"}</td><td>${(v("a1")+v("a2")).toFixed(2)}</td><td>${lf?"Credit demande":"Requested Credit"}</td><td class="gold">${credit.toFixed(2)}</td></tr>
+    <tr><td>${lf?"Fonds de roulement":"Working Capital"}</td><td>${v("r2").toFixed(2)}</td><td></td><td></td></tr>
+    <tr><td><strong>TOTAL</strong></td><td class="gold"><strong>${totalInv.toFixed(2)}</strong></td><td><strong>TOTAL</strong></td><td class="gold"><strong>${totalInv.toFixed(2)}</strong></td></tr>
   `;
 
-  // Fiscal info
+  // Fiscal
   const fiscalMap = {
     RW:`<div class="ds-item"><span class="ds-check">✓</span><span>Rwanda Revenue Authority (RRA)</span></div>
-        <div class="ds-item"><span class="ds-check">→</span><span>CIT: 30% on net profit | VAT: 18% (if Revenue > 20M RWF) | PAYE for employees</span></div>`,
+        <div class="ds-item"><span class="ds-check">→</span><span>CIT: 30% sur benefice net | VAT: 18% (si CA > 20M RWF) | PAYE employes</span></div>`,
     KE:`<div class="ds-item"><span class="ds-check">✓</span><span>Kenya Revenue Authority (KRA)</span></div>
-        <div class="ds-item"><span class="ds-check">→</span><span>Corporation Tax: 30% | VAT: 16% | PAYE for employees</span></div>`,
+        <div class="ds-item"><span class="ds-check">→</span><span>Corporation Tax: 30% | VAT: 16% | PAYE employes</span></div>`,
     US:`<div class="ds-item"><span class="ds-check">✓</span><span>Internal Revenue Service (IRS)</span></div>
         <div class="ds-item"><span class="ds-check">→</span><span>Federal Corporate Tax: 21% | State Tax: variable | FICA: 7.65%</span></div>`,
     OTHER:`<div class="ds-item"><span class="ds-check">✓</span><span>International Standards (IFRS)</span></div>
-           <div class="ds-item"><span class="ds-check">→</span><span>${lf?"Consultez l'autorité fiscale locale":"Consult local tax authority"}</span></div>`,
+           <div class="ds-item"><span class="ds-check">→</span><span>${lf?"Consultez l'autorite fiscale locale":"Consult local tax authority"}</span></div>`,
   };
   document.getElementById("fiscal-detail").innerHTML = fiscalMap[pays]||fiscalMap["OTHER"];
 
@@ -824,13 +860,13 @@ function buildResults(){
   document.getElementById("autres-analyses").innerHTML=`
     <div class="ds-item"><span class="ds-check" style="color:${bankable?'var(--green)':'var(--red)'}">★</span>
     <span style="font-weight:700;color:${bankable?'var(--green)':'var(--red)'}">
-    ${lf?"Statut Bankabilité":"Bankability Status"}: ${bankable?(lf?"BANKABLE (RCSD >= 1.25)":"BANKABLE (DSCR >= 1.25)"):(lf?"NON BANKABLE (RCSD < 1.25)":"NOT BANKABLE (DSCR < 1.25)")}
+    ${lf?"Statut Bankabilite":"Bankability Status"}: ${bankable?(lf?"BANKABLE (RCSD >= 1.25)":"BANKABLE (DSCR >= 1.25)"):(lf?"NON BANKABLE (RCSD < 1.25)":"NOT BANKABLE (DSCR < 1.25)")}
     </span></div>
     <div class="ds-item"><span class="ds-check">→</span><span>
-    ${lf?"Capital total investi":"Total invested capital"}: ${totalInv.toFixed(6)}pi (${usd(totalInv)})
+    ${lf?"Capital total investi":"Total invested capital"}: ${totalInv.toFixed(2)}pi (${usd(totalInv)})
     </span></div>
     <div class="ds-item"><span class="ds-check">→</span><span>
-    ${lf?"Durée du projet":"Project duration"}: ${dur} ${lf?"mois":"months"} | 
+    ${lf?"Duree du projet":"Project duration"}: ${dur} ${lf?"mois":"months"} | 
     ${lf?"Seuil atteint en":"Break-even in"}: ${breakEv<999?breakEv+(lf?" mois":" months"):"N/A"}
     </span></div>
   `;
@@ -838,29 +874,28 @@ function buildResults(){
 
 // ── Build Emplois Ressources (Panel 5) ──
 function buildEmploisRessources(){
-  const totalFRW = v("c1")+v("c2")+v("c3")+v("a1")+v("a2")+v("p1")+v("p2")+
+  const totalInv = v("c1")+v("c2")+v("c3")+v("a1")+v("a2")+v("p1")+v("p2")+
                    v("m1")+v("m2")+v("e1")+v("e2")+v("r2");
-  const totalInv = frwToPi(totalFRW);
-  const apport = frwToPi(v("fin-propre") || v("pr-apport") || 0);
+  const apport = v("fin-propre")||v("pr-apport")||0;
   const credit = Math.max(0, totalInv - apport);
   const lf = lang==='fr';
   document.getElementById("emplois-ressources").innerHTML=`
     <table class="result-table" style="width:100%">
       <tr><th>${lf?"EMPLOIS":"USES"}</th><th>pi</th><th>%</th><th>${lf?"RESSOURCES":"SOURCES"}</th><th>pi</th><th>%</th></tr>
       <tr>
-        <td>${lf?"Investissements":"Investments"}</td><td>${frwToPi(v("c1")+v("c2")+v("c3")+v("e1")).toFixed(6)}</td>
-        <td>${totalInv>0?((frwToPi(v("c1")+v("c2")+v("c3")+v("e1"))/totalInv*100).toFixed(0)):0}%</td>
-        <td>${lf?"Apport propre":"Own Contribution"}</td><td class="green">${apport.toFixed(6)}</td>
+        <td>${lf?"Investissements":"Investments"}</td><td>${(v("c1")+v("c2")+v("c3")+v("e1")).toFixed(2)}</td>
+        <td>${totalInv>0?((v("c1")+v("c2")+v("c3")+v("e1"))/totalInv*100).toFixed(0):0}%</td>
+        <td>${lf?"Apport propre":"Own Contribution"}</td><td class="green">${apport.toFixed(2)}</td>
         <td class="green">${totalInv>0?(apport/totalInv*100).toFixed(0):0}%</td>
       </tr>
       <tr>
-        <td>${lf?"Fonds de Roulement":"Working Capital"}</td><td>${frwToPi(v("a1")+v("a2")+v("r2")).toFixed(6)}</td>
-        <td>${totalInv>0?((frwToPi(v("a1")+v("a2")+v("r2"))/totalInv*100).toFixed(0)):0}%</td>
-        <td>${lf?"Crédit Bancaire":"Bank Credit"}</td><td class="gold">${credit.toFixed(6)}</td>
+        <td>${lf?"Fonds de Roulement":"Working Capital"}</td><td>${(v("a1")+v("a2")+v("r2")).toFixed(2)}</td>
+        <td>${totalInv>0?((v("a1")+v("a2")+v("r2"))/totalInv*100).toFixed(0):0}%</td>
+        <td>${lf?"Credit Bancaire":"Bank Credit"}</td><td class="gold">${credit.toFixed(2)}</td>
         <td class="gold">${totalInv>0?(credit/totalInv*100).toFixed(0):0}%</td>
       </tr>
-      <tr><td><strong>TOTAL</strong></td><td class="gold"><strong>${totalInv.toFixed(6)}</strong></td><td>100%</td>
-          <td><strong>TOTAL</strong></td><td class="gold"><strong>${totalInv.toFixed(6)}</strong></td><td>100%</td></tr>
+      <tr><td><strong>TOTAL</strong></td><td class="gold"><strong>${totalInv.toFixed(2)}</strong></td><td>100%</td>
+          <td><strong>TOTAL</strong></td><td class="gold"><strong>${totalInv.toFixed(2)}</strong></td><td>100%</td></tr>
     </table>
   `;
 }
@@ -870,7 +905,7 @@ async function initiatePayment(){
   if(!validate(6)) return;
   if(!piService.user){
     const r = await piService.login(["username","payments"]);
-    if(!r.success){toast(lang==='fr'?"Connexion Pi échouée. Ouvrez dans Pi Browser.":"Pi connection failed. Open in Pi Browser.",true);return;}
+    if(!r.success){toast(lang==='fr'?"Connexion Pi echouee. Ouvrez dans Pi Browser.":"Pi connection failed. Open in Pi Browser.",true);return;}
     document.getElementById("pi-username").textContent=r.user.username;
     document.getElementById("user-status").style.display="block";
   }
@@ -881,12 +916,12 @@ async function initiatePayment(){
     await Pi.init({version:"2.0",sandbox:false});
     Pi.createPayment({
       amount:3,
-      memo:"DEEPSTUDY-business-"+ts+"-"+uid,
-      metadata:{type:"deep_study",domain:"PiBusiness",userId:uid,timestamp:ts}
+      memo:"DEEPSTUDY-smartbiz-"+ts+"-"+uid,
+      metadata:{type:"deep_study",domain:"SmartBiz",userId:uid,timestamp:ts}
     },{
       onReadyForServerApproval:(id)=>{ console.log("Approval ready:",id); toast(lang==='fr'?"En attente d'approbation Pi...":"Waiting for Pi approval..."); },
       onReadyForServerCompletion:(id,txid)=>{ showSuccess(txid); },
-      onCancel:()=>{ toast(lang==='fr'?"Paiement annulé":"Payment cancelled",true); },
+      onCancel:()=>{ toast(lang==='fr'?"Paiement annule":"Payment cancelled",true); },
       onError:(e)=>{ console.error(e); toast(lang==='fr'?"Erreur de paiement":"Payment error",true); }
     });
   }catch(e){
@@ -900,7 +935,7 @@ function showSuccess(txid){
   document.querySelector(".progress-wrap").style.display="none";
   document.getElementById("success-panel").style.display="block";
   document.getElementById("txid-display").textContent="TXID: "+(txid||("0x"+Math.random().toString(16).substr(2,40).toUpperCase()));
-  toast(lang==='fr'?"Rapport commandé avec succès!":"Report ordered successfully!",false,true);
+  toast(lang==='fr'?"Rapport commande avec succes!":"Report ordered successfully!",false,true);
   applyLang();
 }
 
@@ -911,12 +946,12 @@ function toast(msg,isErr=false,isOk=false){
   setTimeout(()=>{t.style.display="none";},3500);
 }
 
-// Update revenue from quantity x price (FRW)
+// Update revenue from quantity x price
 function updateRevFromQty(){
   const qty=v("pj-qte"); const prix=v("pj-prix");
   if(qty>0 && prix>0){
     const rev=(qty*prix);
-    document.getElementById("r1").value=rev;
+    document.getElementById("r1").value=rev.toFixed(4);
     recalc();
   }
 }
