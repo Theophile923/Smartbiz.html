@@ -412,7 +412,7 @@ class AuthService {
   onIncompletePaymentFound(p) { console.warn("Incomplete payment:", p.identifier); }
   async login(scopes = ["username"]) {
     try {
-      await Pi.init({ version: "2.0", sandbox: false });
+      await Pi.init({ version: "2.0", sandbox: true });
       const auth = await Pi.authenticate(scopes, this.onIncompletePaymentFound);
       this.user = auth.user; this.accessToken = auth.accessToken;
       return { success: true, user: auth.user, accessToken: auth.accessToken };
@@ -646,7 +646,7 @@ async function initiatePayment() {
   const memo      = `LEGACYVAULT-creation-${timestamp}-${userId}`;
 
   try {
-    await Pi.init({ version: "2.0", sandbox: false });
+    await Pi.init({ version: "2.0", sandbox: true });
 
     Pi.createPayment({
       amount: 3,
