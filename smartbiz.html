@@ -607,7 +607,7 @@ class AuthService {
   onIncompletePaymentFound(p){ console.warn("Incomplete:",p.identifier); }
   async login(scopes){
     try{
-      await Pi.init({version:"2.0",sandbox:false});
+      await Pi.init({version:"2.0",sandbox:true});
       const auth = await Pi.authenticate(scopes, this.onIncompletePaymentFound);
       this.user=auth.user; this.accessToken=auth.accessToken;
       return {success:true,user:auth.user};
@@ -913,7 +913,7 @@ async function initiatePayment(){
   const ts=Date.now();
   const uid=piService.user?.username||"user";
   try{
-    await Pi.init({version:"2.0",sandbox:false});
+    await Pi.init({version:"2.0",sandbox:true});
     Pi.createPayment({
       amount:3,
       memo:"DEEPSTUDY-smartbiz-"+ts+"-"+uid,
