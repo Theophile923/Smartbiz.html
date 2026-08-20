@@ -518,7 +518,7 @@ class AuthService{
   onIncompletePaymentFound(p){console.warn("Incomplete:",p.identifier);}
   async login(scopes){
     try{
-      await Pi.init({version:"2.0",sandbox:false});
+      await Pi.init({version:"2.0",sandbox:true});
       const auth=await Pi.authenticate(scopes,this.onIncompletePaymentFound);
       this.user=auth.user;this.accessToken=auth.accessToken;
       try{
